@@ -1,0 +1,69 @@
+\documentclass[phd]{umbcthesis}
+
+\usepackage[american]{babel}
+\usepackage{csquotes}
+\usepackage[style=apa,sortcites=true,sorting=nyt,backend=biber]{biblatex}
+\usepackage[naturalnames,final,colorlinks,linkcolor=black,citecolor=black]{hyperref}
+\usepackage{booktabs}
+\usepackage{rotating}
+\usepackage[small]{caption}
+\usepackage{soul}
+\usepackage{longtable}
+\usepackage{dcolumn}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\newtheorem{theorem}{Theorem}[chapter]
+
+\DeclareLanguageMapping{american}{american-apa}
+\bibliography{thesis}
+
+\title{My Dissertation Title}
+\author{Morgan Q. Student}
+\date{2020}
+\keywords{keyword one, keyword two, keyword three}
+\subjects{subject one, subject two}
+\advisor{Taylor Q. Advisor}
+\advisortitle{Professor}
+\dept{Department of Redundancy Department}
+\makemetadata
+
+\altnewglossary{timeline}{timeline}{Timeline of My Project}
+\makeglossaries
+
+\begin{document}
+
+\preliminarymatter
+\blankpage
+\makeapprovalsheet
+\include{cv}
+\include{abstract}
+\maketitle
+\makecopyright
+\blankpage
+
+\setlength{\abovedisplayskip}{3pt}
+\setlength{\belowdisplayskip}{3pt}
+\setlength{\abovedisplayshortskip}{2pt}
+\setlength{\belowdisplayshortskip}{2pt}
+
+\frontmatter
+\include{dedication}
+\include{acks}
+\setcounter{tocdepth}{1}
+\tableofcontents
+\maketables
+\makefigures
+\makeabbrevs
+
+\mainmatter
+
+\include{intro}
+
+\backmatter
+\part{Appendix}
+\include{timeline}
+\makebibliography
+\blankpage
+
+\end{document}

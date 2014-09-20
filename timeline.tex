@@ -1,0 +1,12 @@
+\renewcommand{\glossarypreamble}{\singlespacing}
+\renewcommand{\glossarypostamble}{\doublespacing}
+
+\printglossary[type=timeline,title={Timeline of My Project},numberedsection=autolabel,nonumberlist=true]
+
+\newcommand{\newtimelineentry}[2]{\newglossaryentry{#1}{name={#1},type=timeline,description={#2}}}
+
+\newtimelineentry{2008}{I started my research}
+\newtimelineentry{2014}{I finished my dissertation proposal}
+\newtimelineentry{2020}{I graduated}
+
+\glsaddall[types=timeline]

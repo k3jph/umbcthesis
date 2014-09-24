@@ -13,3 +13,6 @@ thesis.pdf: abstract.tex dedication.tex intro.tex thesis.tex timeline.tex umbcth
 	$ $(LATEX) 	thesis
 	$ $(MKGLS) 	thesis
 	$ $(LATEX) 	thesis
+
+clean:
+	$ git clean -df
